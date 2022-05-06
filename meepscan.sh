@@ -67,6 +67,7 @@ function nmap_ports_open () {
 
 # Call functions
 
+banner
 user
 connect
 app_install

@@ -42,6 +42,14 @@ Using meepscan
 ----------
 Meepscan ...
 
+Version style
+----------
+v1.0.0
+v *.*.* - Version
+v1.*.* - Major Changes New Functions
+v*.0.* - New Tools
+v*.*.0 - Minor Changes
+
 Contributing
 ------------
 Information about filing bug reports and contributing to the Nmap project can

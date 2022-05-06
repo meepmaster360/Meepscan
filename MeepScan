@@ -45,9 +45,9 @@ fi
 # Nmap open ports
 
 function nmap_ports_open () {
-	echo -e "${GREEN}Type IP${NOCOLOR}"
+	echo -e "\n${GREEN}Type IP${NOCOLOR} ex:192.168.1.1"
 	read ip
-	echo -e "${GREEN}Grabbing ports...${NOCOLOR}"
+	echo -e "${GREEN}Grabbing open ports...${NOCOLOR}"
 	ports=$(nmap -p- --min-rate 1000 -T4 $ip | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)  	#
 	echo -e "${GREEN}Ports grabbed!${NOCOLOR}"
 	echo -e "${GREEN}Scanning open ports...${NOCOLOR}"

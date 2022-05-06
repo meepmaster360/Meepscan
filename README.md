@@ -24,6 +24,7 @@ Questions and suggestions may be sent to the
 Installing
 ----------
 Ideally, you should be able to just type:
+
     Choose directory
     git clone git@github.com:meepmaster360/meepscan.git
     cd meepscan

@@ -11,10 +11,10 @@ macOS, and Linux (RPM) are available from
 [Nmap.org](https://nmap.org/download.html)
 
 Full documentation is also available
-[on the Nmap.org website](https://nmap.org/docs.html).
+on the [Nmap.org website](https://nmap.org/docs.html).
 
-Questions and suggestions may be sent to
-[the Nmap-dev mailing list](https://nmap.org/mailman/listinfo/dev).
+Questions and suggestions may be sent to the
+[Nmap-dev mailing list](https://nmap.org/mailman/listinfo/dev).
 
 Installing
 ----------

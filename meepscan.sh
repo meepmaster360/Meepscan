@@ -13,7 +13,7 @@ NOCOLOR="\033[0m"
 # User root check
 
 function user() {
-	if [ $(id -u) != "0" ];then																				# Or like: 
+	if [ $(id -u) != "0" ];then																				
 		echo -e "\n${GREEN}Please run this script with root user!${NOCOLOR}"
 		exit 1
 	fi
@@ -22,7 +22,7 @@ function user() {
 # Internet connection check
 
 function connect() {
-	ping -c 1 -w 3 google.com > /dev/null 2>&1																# Comments...
+	ping -c 1 -w 3 google.com > /dev/null 2>&1																
 	if [ "$?" != 0 ];then
 		echo -e "\n${RED}[!]${NOCOLOR} ${GREEN}This script needs an active internet connection!${NOCOLOR}"
 		exit 1
@@ -33,7 +33,7 @@ function app_install () {
 
 # Nmap installation	
 
-	if [ ! -x "$(command -v nmap)" ];then																	# Comments...
+	if [ ! -x "$(command -v nmap)" ];then																	
         echo -e "${RED}[+]${NOCOLOR} ${GREEN}Nmap not detected...Installing${NOCOLOR}"
         sudo apt-get install nmap -y > installing;rm installing
 		else
@@ -48,11 +48,11 @@ function nmap_ports_open () {
 	echo -e "\n${GREEN}Type IP${NOCOLOR} ex:192.168.1.1"
 	read ip
 	echo -e "${GREEN}Grabbing open ports...${NOCOLOR}"
-	ports=$(nmap -p- --min-rate 1000 -T4 $ip | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)  	#
+	ports=$(nmap -p- --min-rate 1000 -T4 $ip | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)  
 	echo -e "${GREEN}Ports grabbed!${NOCOLOR}"
 	echo -e "${GREEN}Scanning open ports...${NOCOLOR}"
 	nmap -sC -sV -Pn -p $ports $ip
-	echo																			# -sC
+	echo				
 }	
 
 # Call functions

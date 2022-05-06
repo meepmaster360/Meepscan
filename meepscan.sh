@@ -45,12 +45,12 @@ function app_install () {
 # Nmap open ports
 
 function nmap_ports_open () {
-	echo -e "\n${GREEN}Type IP${NOCOLOR} ex:192.168.1.1"
+	echo -e "\n${GREEN}Type IP${NOCOLOR} ex:192.168.1.1\n"
 	read ip
-	echo -e "${GREEN}Grabbing open ports...${NOCOLOR}"
+	echo -e "\n${GREEN}Grabbing open ports...${NOCOLOR}"
 	ports=$(nmap -p- --min-rate 1000 -T4 $ip | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)  
-	echo -e "${GREEN}Ports grabbed!${NOCOLOR}"
-	echo -e "${GREEN}Scanning open ports...${NOCOLOR}"
+	echo -e "\n${GREEN}Ports grabbed!${NOCOLOR}"
+	echo -e "\n${GREEN}Scanning open ports...${NOCOLOR}"
 	nmap -sC -sV -Pn -p $ports $ip
 	echo				
 }	

@@ -147,6 +147,7 @@ function menu(){
         help		
     else
         echo -e "${GREEN} Wrong option, Bye...${NOCOLOR}";sleep 2
+		exit
     fi
 }
 

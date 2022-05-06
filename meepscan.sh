@@ -129,7 +129,8 @@ function menu(){
     echo -e "${GREEN}3${NOCOLOR} Check/Install Dependencies"
     echo -e "${GREEN}4${NOCOLOR} Help"
     echo -e ""
-    read -p "${GREEN} Select one : ${NOCOLOR}" meno;
+    read -e "${GREEN} Select one : ${NOCOLOR}"
+	read meno;
     echo -e ""
     
     if [ $meno = 1 ]

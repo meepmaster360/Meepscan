@@ -8,9 +8,9 @@ Meepscan
 ----------
 Meepscan is a simple program for using nmap using only open ports.
 
-First confirms user root previleges.
+First confirms user root privileges.
 
-Then internet conection.
+Then internet connection.
 
 After verifies and installs nmap.
 
@@ -47,7 +47,7 @@ Ideally, you should be able to just type:
     Choose directory
     git clone git@github.com:meepmaster360/meepscan.git
     cd meepscan
-    $sudo bash meescan.sh or $chmod +x meepscan.sh and the allways $sudo ./meepscan.sh
+    $sudo bash meescan.sh or $chmod +x meepscan.sh and the always $sudo ./meepscan.sh
 
 
 Using Nmap
@@ -65,7 +65,7 @@ Using meepscan
     In the correct directory (/meepscan/)
     $sudo bash meepscan.sh
     or
-    $chmo +x meepscan.sh (only once)
+    $chmod +x meepscan.sh (only once)
     $sudo ./meepscan.sh
     #./meepscan.sh (root user)
 

@@ -1,1 +1,9 @@
+###
+With some IP's it gives this error!!!
+Any idea?
+Cheers, Meep.
 
+"Starting Nmap 7.80 ( https://nmap.org ) at 2022-05-07 00:40 WEST
+Error #487: Your port specifications are illegal. Example of proper form: "-100,200-1024,T:3000-4000,U:60000-"
+QUITTING!"
+###

@@ -19,7 +19,7 @@ function banner() {
 	echo -e "(  \/  )( ___)( ___)(  _ \/ __) / __)  /__\  ( \( )( ___)(  _ \ "
 	echo -e " )    (  )__)  )__)  )___/\__ \( (__  /(__)\  )  (  )__)  )   / "
 	echo -e "(_/\/\_)(____)(____)(__)  (___/ \___)(__)(__)(_)\_)(____)(_)\_) "                                                                       
-	echo -e "${NOCOLORS}v1.6.1" 
+	echo -e "${NOCOLORS}v1.6.2" 
 }
 
 # User root check
@@ -150,10 +150,10 @@ function menu(){
 	elif [ $meno = 0 ]
     then
         echo -e "${GREEN} Nice to meet you, Bye...${NOCOLOR}";sleep 2
-		exit		
+	exit		
     else
         echo -e "${GREEN} Wrong option, Bye...${NOCOLOR}";sleep 2
-		exit
+	exit
     fi
 
 	menu

@@ -54,6 +54,38 @@ function app_install () {
 	fi
 }
 
+function help() {
+less << _EOF_
+
+ Up -- Debian/Ubuntu Update Tool (Version 1.4)  -help
+
+ Up is a tool that automates the update procedure for Debian and Ubuntu based
+ Linux systems.
+
+ Press "q" to exit this Help page.
+
+ Commands:
+   
+    up --help = shows this help page.
+
+ By Meepmaster360
+
+ Disclaimer:
+
+ THIS SOFTWARE IS PROVIDED BY MEEPMASTER360 “AS IS” AND ANY EXPRESS OR IMPLIED
+ WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+ EVENT SHALL MEEPMASTER BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+ IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+_EOF_
+}
+
 # Nmap open ports
 
 function nmap_ports_open () {
@@ -74,3 +106,4 @@ user
 connect
 app_install
 nmap_ports_open
+# help (call latter)

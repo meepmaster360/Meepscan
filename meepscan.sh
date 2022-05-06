@@ -50,7 +50,6 @@ function app_install () {
         sudo apt-get install nmap -y > installing;rm installing
 		else
     	echo -e "\n${GREEN}[+]${NOCOLOR}Nmap detected"
-     
 	fi
 }
 

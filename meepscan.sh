@@ -56,7 +56,7 @@ function app_install () {
 function help() {
 less << _EOF_
 
- Meepscan -- Nmap Scanner (Version 1.4.1)  -help
+ Meepscan -- Nmap Scanner (Version 1.6.1)  -help
 
  Meepscan is a tool that automates nmap scanning of defined ip, based in
  Linux systems.

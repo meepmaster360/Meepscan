@@ -66,9 +66,13 @@ less << _EOF_
 
  Commands:
  
-  
-   
-    up --help = shows this help page.
+ 	Choose directory
+	git clone git@github.com:meepmaster360/meepscan.git
+	cd meepscan
+	$sudo bash meescan.sh 
+	or 
+	$chmod +x meepscan.sh (once) 
+	$sudo ./meepscan.
 
  By Meepmaster360
 

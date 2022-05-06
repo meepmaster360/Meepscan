@@ -1,7 +1,7 @@
 #!/bin/bash
 # Author: meepmaster
-# Date: 19-04-2022
-# Description: Enumeration
+# Date: 06-05-2022
+# Description: Nmap scan
 
 
 # Color variables 
@@ -40,7 +40,7 @@ else
     echo "[+] nmap detected"
      
 fi
-
+}
 
 # Nmap open ports
 
@@ -54,3 +54,9 @@ function ports_open () {
 	nmap -sC -sV -Pn -p $ports $ip
 }	
 
+# Call functions
+
+user
+connect
+app_install
+ports_open

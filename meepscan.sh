@@ -153,6 +153,7 @@ function menu(){
 		echo -e "\n${GREEN} Nice to meet you, Bye...${NOCOLOR}\n";sleep 2
 	exit		
     else
+		banner
 		echo -e "\n${GREEN} Wrong option, Bye...${NOCOLOR}\n";sleep 2
 	exit
     fi

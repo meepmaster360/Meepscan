@@ -3,6 +3,8 @@ Meepscan
                                             v1.0.0
 ====
 
+Nmap
+----------
 Nmap is released under a custom license, which is based on (but not compatible
 with) GPLv2. The Nmap license allows free usage by end users, and we also offer
 a commercial license for companies that wish to redistribute Nmap technology
@@ -36,8 +38,12 @@ list of the most common options, which are discussed in depth in [the man
 page](https://nmap.org/book/man.html). Users who prefer a graphical interface
 can use the included [Zenmap front-end](https://nmap.org/zenmap/).
 
+Using meepscan
+----------
+Meepscan ...
+
 Contributing
 ------------
 Information about filing bug reports and contributing to the Nmap project can
-be found in the [HACKING](HACKING) and [CONTRIBUTING.md](CONTRIBUTING.md)
+be found in the [BUGHOUSE](BUGHOUSE) and [CONTRIBUTING.md](CONTRIBUTING.md)
 files.

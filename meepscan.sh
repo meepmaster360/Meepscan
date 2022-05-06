@@ -145,7 +145,7 @@ function menu(){
     then
         help		
     else
-        echo -e "Wrong option, Bye...";sleep 2
+        echo -e "${GREEN} Wrong option, Bye...${NOCOLOR}";sleep 2
     fi
 }
 
@@ -154,5 +154,4 @@ function menu(){
 banner
 user
 connect
-app_install
 menu

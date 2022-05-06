@@ -96,7 +96,7 @@ _EOF_
 # Nmap open ports
 
 function nmap_ports_open_intense () {
-	echo -e "\n${GREEN}Type IP${NOCOLOR} ex:192.168.1.1\n"
+	echo -e "\n${GREEN}Type IP${NOCOLOR} ex: 192.168.1.1\n"
 	read ip
 	echo -e "\n${GREEN}Grabbing open ports...${NOCOLOR}"
 	ports=$(nmap -p- --min-rate 1000 -T4 $ip | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)  
@@ -109,7 +109,7 @@ function nmap_ports_open_intense () {
 # Nmap open ports
 
 function nmap_ports_open_fast () {
-	echo -e "\n${GREEN}Type IP${NOCOLOR} ex:192.168.1.1\n"
+	echo -e "\n${GREEN}Type IP${NOCOLOR} ex: 192.168.1.1\n"
 	read ip
 	echo -e "\n${GREEN}Grabbing open ports...${NOCOLOR}"
 	ports=$(nmap -p- --min-rate 1000 -T4 $ip | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)  
@@ -129,7 +129,7 @@ function menu(){
     echo -e "${GREEN}3${NOCOLOR} Check/Install Dependencies"
     echo -e "${GREEN}4${NOCOLOR} Help"
     echo -e ""
-    read -e "${GREEN} Select one : ${NOCOLOR}"
+    echo -e "${GREEN} Select one : ${NOCOLOR}"
 	read meno;
     echo -e ""
     

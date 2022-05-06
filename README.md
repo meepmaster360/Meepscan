@@ -1,11 +1,7 @@
 
-# Meepscan 
+# Meepscan
 v1.3.1
-
 ==========
-
-
-Meepscan
 ----------
 Meepscan is a simple program for using nmap using only open ports.
 

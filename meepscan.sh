@@ -149,10 +149,11 @@ function menu(){
         help
 	elif [ $meno = 0 ]
     then
-        echo -e "${GREEN} Nice to meet you, Bye...${NOCOLOR}\n";sleep 2
+        banner
+		echo -e "${GREEN} Nice to meet you, Bye...${NOCOLOR}\n";sleep 2
 	exit		
     else
-        echo -e "${GREEN} Wrong option, Bye...${NOCOLOR}\n";sleep 2
+		echo -e "${GREEN} Wrong option, Bye...${NOCOLOR}\n";sleep 2
 	exit
     fi
 

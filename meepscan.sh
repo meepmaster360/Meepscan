@@ -57,14 +57,16 @@ function app_install () {
 function help() {
 less << _EOF_
 
- Up -- Debian/Ubuntu Update Tool (Version 1.4)  -help
+ Meepscan -- Nmap Scanner (Version 1.4.1)  -help
 
- Up is a tool that automates the update procedure for Debian and Ubuntu based
+ Meepscan is a tool that automates nmap scanning of defined ip, based in
  Linux systems.
 
  Press "q" to exit this Help page.
 
  Commands:
+ 
+  
    
     up --help = shows this help page.
 

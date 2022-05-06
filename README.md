@@ -1,6 +1,6 @@
 
 # Meepscan 
-v1.2.1
+v1.2.2
 
 ==========
 
@@ -19,7 +19,7 @@ Ask for IP.
 
 Nmap open ports.
 
-Nmap with -sC, -sV, -Pn options.
+Nmap with -sC, -sV, -A, -Pn options.
 
 
 Nmap

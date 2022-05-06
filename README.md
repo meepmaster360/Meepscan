@@ -47,7 +47,7 @@ Ideally, you should be able to just type:
     
     cd meepscan
     
-    $sudo bash meescan.sh or $chmod +x meepscan.sh and the always $sudo ./meepscan.sh
+    $sudo bash meepscan.sh or $chmod +x meepscan.sh and the always $sudo ./meepscan.sh
 
 
 Using Nmap

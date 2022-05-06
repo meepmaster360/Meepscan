@@ -115,7 +115,7 @@ function nmap_ports_open_fast () {
 	ports=$(nmap -p- --min-rate 1000 -T4 $ip | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)  
 	echo -e "\n${GREEN}Ports grabbed!${NOCOLOR}"
 	echo -e "\n${GREEN}Scanning open ports...${NOCOLOR}\n"
-	sudo nmap -T4 -sV -p $ports $ip
+	sudo nmap -T4 -p $ports $ip
 	echo				
 }
 

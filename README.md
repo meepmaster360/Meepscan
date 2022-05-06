@@ -45,8 +45,11 @@ Installing
 Ideally, you should be able to just type:
 
     Choose directory
+    
     git clone git@github.com:meepmaster360/meepscan.git
+    
     cd meepscan
+    
     $sudo bash meescan.sh or $chmod +x meepscan.sh and the always $sudo ./meepscan.sh
 
 

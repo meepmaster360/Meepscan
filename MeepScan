@@ -36,10 +36,10 @@ function app_install () {
 	if [ ! -x "$(command -v nmap)" ];then																	# Comments...
         echo -e "${RED}[+]${NOCOLOR} ${GREEN}Nmap not detected...Installing${NOCOLOR}"
         sudo apt-get install nmap -y > installing;rm installing
-else
-    echo "${GREEN}[+] nmap detected${NOCOLOR}"
+		else
+    	echo -e "\n${GREEN}[+]${NOCOLOR}Nmap detected"
      
-fi
+	fi
 }
 
 # Nmap open ports

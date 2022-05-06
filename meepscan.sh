@@ -129,6 +129,8 @@ function menu(){
     echo -e "${GREEN}3${NOCOLOR} Check/Install Dependencies"
     echo -e "${GREEN}4${NOCOLOR} Help"
     echo -e ""
+	echo -e "${GREEN}0${NOCOLOR} Exit/Quit"
+    echo -e ""
     echo -e "${GREEN} Select one : ${NOCOLOR}"
 	read meno;
     echo -e ""
@@ -144,11 +146,17 @@ function menu(){
         app_install
     elif [ $meno = 4 ]
     then
-        help		
+        help
+	elif [ $meno = 0 ]
+    then
+        echo -e "${GREEN} Nice to meet you, Bye...${NOCOLOR}";sleep 2
+		exit		
     else
         echo -e "${GREEN} Wrong option, Bye...${NOCOLOR}";sleep 2
 		exit
     fi
+
+	menu
 }
 
 # Call functions

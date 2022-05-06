@@ -78,9 +78,9 @@ v1.0.0
 
 v *.*.* - Version
 
-v1.*.* - Major Changes New Functions
+v1.*.* - Major Changes / New Functions
 
-v*.0.* - New Tools
+v*.0.* - New Tools / New Directory
 
 v*.*.0 - Minor Changes
 

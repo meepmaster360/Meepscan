@@ -131,7 +131,7 @@ function menu(){
     echo -e ""
 	echo -e "${GREEN}0${NOCOLOR} Exit/Quit"
     echo -e ""
-    echo -e "${GREEN} Select one : ${NOCOLOR}"
+    echo -e "${GREEN} Select one : ${NOCOLOR}\n"
 	read meno;
     echo -e ""
     
@@ -149,10 +149,10 @@ function menu(){
         help
 	elif [ $meno = 0 ]
     then
-        echo -e "${GREEN} Nice to meet you, Bye...${NOCOLOR}";sleep 2
+        echo -e "${GREEN} Nice to meet you, Bye...${NOCOLOR}\n";sleep 2
 	exit		
     else
-        echo -e "${GREEN} Wrong option, Bye...${NOCOLOR}";sleep 2
+        echo -e "${GREEN} Wrong option, Bye...${NOCOLOR}\n";sleep 2
 	exit
     fi
 

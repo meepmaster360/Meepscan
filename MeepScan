@@ -1,0 +1,56 @@
+#!/bin/bash
+# Author: meepmaster
+# Date: 19-04-2022
+# Description: Enumeration
+
+
+# Color variables 
+
+RED="\033[1;31m"
+GREEN="\033[1;32m"
+NOCOLOR="\033[0m"
+
+# User root check
+
+function user() {
+	if [ $(id -u) != "0" ];then
+		echo -e "\n$r[!]$e Please run this script with root user!"
+		exit 1
+	fi
+}
+
+# Internet connection check
+
+function connect() {
+	ping -c 1 -w 3 google.com > /dev/null 2>&1
+	if [ "$?" != 0 ];then
+		echo -e "\n$r[!]$e This script needs an active internet connection!"
+		exit 1
+	fi
+}
+
+function app_install () {
+
+# Nmap installation	
+
+	if [ ! -x "$(command -v nmap)" ];then
+        echo "[+] nmap not detected...Installing"
+        sudo apt-get install nmap -y > installing;rm installing
+else
+    echo "[+] nmap detected"
+     
+fi
+
+
+# Nmap open ports
+
+function ports_open () {
+	echo Type IP
+	read ip
+	echo Grabbing ports...
+	ports=$(nmap -p- --min-rate 1000 -T4 $ip | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)  
+	echo Ports grabbed!
+	echo Scanning...
+	nmap -sC -sV -Pn -p $ports $ip
+}	
+

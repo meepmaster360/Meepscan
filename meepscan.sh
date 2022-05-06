@@ -19,7 +19,7 @@ function banner() {
 	echo -e "(  \/  )( ___)( ___)(  _ \/ __) / __)  /__\  ( \( )( ___)(  _ \ "
 	echo -e " )    (  )__)  )__)  )___/\__ \( (__  /(__)\  )  (  )__)  )   / "
 	echo -e "(_/\/\_)(____)(____)(__)  (___/ \___)(__)(__)(_)\_)(____)(_)\_) "                                                                       
-	echo -e "${NOCOLORS}v1.4.1" 
+	echo -e "${NOCOLORS}v1.6.1" 
 }
 
 # User root check
@@ -91,9 +91,11 @@ less << _EOF_
 _EOF_
 }
 
+
+
 # Nmap open ports
 
-function nmap_ports_open () {
+function nmap_ports_open_intense () {
 	echo -e "\n${GREEN}Type IP${NOCOLOR} ex:192.168.1.1\n"
 	read ip
 	echo -e "\n${GREEN}Grabbing open ports...${NOCOLOR}"
@@ -102,7 +104,50 @@ function nmap_ports_open () {
 	echo -e "\n${GREEN}Scanning open ports...${NOCOLOR}\n"
 	sudo nmap -T4 -sC -sV -A -Pn -p $ports $ip
 	echo				
-}	
+}
+
+# Nmap open ports
+
+function nmap_ports_open_fast () {
+	echo -e "\n${GREEN}Type IP${NOCOLOR} ex:192.168.1.1\n"
+	read ip
+	echo -e "\n${GREEN}Grabbing open ports...${NOCOLOR}"
+	ports=$(nmap -p- --min-rate 1000 -T4 $ip | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)  
+	echo -e "\n${GREEN}Ports grabbed!${NOCOLOR}"
+	echo -e "\n${GREEN}Scanning open ports...${NOCOLOR}\n"
+	sudo nmap -T4 -sV -p $ports $ip
+	echo				
+}
+
+function menu(){
+    echo -e ""
+    echo -e "${GREEN}[?]${NOCOLOR} Scan type"
+    echo -e ""
+    echo -e "${GREEN}1${NOCOLOR} Fast Scan"
+    echo -e "${GREEN}2${NOCOLOR} Intense Scan"
+    echo -e ""
+    echo -e "${GREEN}3${NOCOLOR} Check/Install Dependencies"
+    echo -e "${GREEN}4${NOCOLOR} Help"
+    echo -e ""
+    read -p "${GREEN} Select one : ${NOCOLOR}" meno;
+    echo -e ""
+    
+    if [ $meno = 1 ]
+    then
+        nmap_ports_open_fast
+    elif [ $meno = 2 ]
+    then
+        nmap_ports_open_intense
+    elif [ $meno = 3 ]
+    then
+        app_install
+    elif [ $meno = 4 ]
+    then
+        help		
+    else
+        echo -e "Wrong option, Bye...";sleep 2
+    fi
+}
 
 # Call functions
 
@@ -110,5 +155,4 @@ banner
 user
 connect
 app_install
-nmap_ports_open
-# help (call latter)
+menu

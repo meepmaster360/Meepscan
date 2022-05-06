@@ -24,8 +24,10 @@ Questions and suggestions may be sent to the
 Installing
 ----------
 Ideally, you should be able to just type:
-
-    sudo bash meescan.sh
+    Choose directory
+    git clone git@github.com:meepmaster360/meepscan.git
+    cd meepscan
+    $sudo bash meescan.sh or $chmod +x meepscan.sh and the allways $sudo ./meepscan.sh
 
 For far more in-depth compilation, installation, and removal notes, read the
 [Nmap Install Guide](https://nmap.org/book/install.html) on Nmap.org.

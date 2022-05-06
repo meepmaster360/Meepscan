@@ -9,13 +9,13 @@ First confirms user root privileges.
 
 Then internet connection.
 
-After verifies and installs nmap.
-
 Ask for IP.
 
 Nmap open ports.
 
-Nmap with -sC, -sV, -A, -Pn options.
+Option to install dependencies.
+
+Nmap with fast and intense options.
 
 
 Nmap

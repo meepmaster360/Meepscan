@@ -103,7 +103,7 @@ function nmap_ports_open_intense () {
 	echo -e "\n${GREEN}Grabbing open ports...${NOCOLOR}"
 	#ports=$(nmap -p- --min-rate 1000 -T4 $ip | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)  
 	ports=$(nmap -p- -T4 $ip | grep open | cut -d "/" -f 1 | tr -s '\n' ',' | rev | cut -c 2- | rev)
-	echo -e "\n${GREEN}Ports grabbed!${NOCOLOR}"
+	echo -e "\n${GREEN}Ports grabbed!${NOCOLOR}";sleep 1
 	echo -e "\n${GREEN}Scanning open ports...${NOCOLOR}\n"
 	sudo nmap -T4 -sC -sV -A -Pn -p $ports $ip
 	echo				

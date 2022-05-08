@@ -105,7 +105,7 @@ function nmap_ports_open_intense () {
 	ports=$(nmap -p- -T4 $ip | grep open | cut -d "/" -f 1 | tr -s '\n' ',' | rev | cut -c 2- | rev)
 	echo -e "\n${GREEN}Ports grabbed!${NOCOLOR}";sleep 1
 	echo -e "\n${GREEN}Scanning open ports...${NOCOLOR}\n"
-	sudo nmap -T4 -sC -sV -A -Pn -p $ports $ip
+	sudo nmap -T4 -sC -sV -Pn -p $ports $ip
 	echo				
 }
 

@@ -1,7 +1,22 @@
 
-Meepscan
-                                            v1.0.0
-====
+# Meepscan
+v1.6.2
+
+----------
+Meepscan is a simple program for using nmap using only open ports.
+
+First confirms user root privileges.
+
+Then internet connection.
+
+Ask for IP.
+
+Nmap open ports.
+
+Option to install dependencies.
+
+Nmap with fast and intense options.
+
 
 Nmap
 ----------
@@ -21,14 +36,19 @@ on the [Nmap.org website](https://nmap.org/docs.html).
 Questions and suggestions may be sent to the
 [Nmap-dev mailing list](https://nmap.org/mailman/listinfo/dev).
 
+
 Installing
 ----------
 Ideally, you should be able to just type:
 
-    sudo bash meescan.sh
+    Choose directory
+    
+    git clone git@github.com:meepmaster360/meepscan.git
+    
+    cd meepscan
+    
+    $sudo bash meepscan.sh or $chmod +x meepscan.sh and the always $sudo ./meepscan.sh
 
-For far more in-depth compilation, installation, and removal notes, read the
-[Nmap Install Guide](https://nmap.org/book/install.html) on Nmap.org.
 
 Using Nmap
 ----------
@@ -38,12 +58,36 @@ list of the most common options, which are discussed in depth in [the man
 page](https://nmap.org/book/man.html). Users who prefer a graphical interface
 can use the included [Zenmap front-end](https://nmap.org/zenmap/).
 
+
 Using meepscan
 ----------
-Meepscan ...
+
+    In the correct directory (/meepscan/)
+    $sudo bash meepscan.sh
+    or
+    $chmod +x meepscan.sh (only once)
+    $sudo ./meepscan.sh
+    #./meepscan.sh (root user)
+
+
+Version style
+----------
+v1.0.0
+
+v *.*.* - Version
+
+v1.*.* - Major Changes / New Functions
+
+v*.0.* - New Tools / New Directory
+
+v*.*.0 - Minor Changes
+
 
 Contributing
 ------------
-Information about filing bug reports and contributing to the Nmap project can
+Information about filing bug reports and contributing to the meepscan project can
 be found in the [BUGHOUSE](BUGHOUSE) and [CONTRIBUTING.md](CONTRIBUTING.md)
 files.
+
+
+# This Script Was Made By @meepmaster360
